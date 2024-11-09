@@ -1,25 +1,40 @@
-import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import LineGradient from "../components/LineGradient";
 
 const Contact = () => {
   const {
     register,
-    trigger,
+    handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
+  const onSubmit = async (data) => {
+    try {
+     
+      const result = await emailjs.send(
+        "service_1hfnewr",
+        "template_zwmz7kj", 
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+        },
+        "e-HAklmyeZcUCIGZ8" 
+      );
+      console.log("Message sent:", result.text);
+      alert("Message sent successfully!");
+      reset()
+    } catch (error) {
+      console.log("Error sending message:", error);
+      alert("There was an error sending your message. Please try again.");
     }
   };
 
   return (
     <section id="contact" className="contact py-48">
-      {/* HEADINGS */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -68,12 +83,7 @@ const Contact = () => {
           }}
           className="basis-1/2 mt-10 md:mt-0"
         >
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-            action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-            method="POST"
-          >
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
@@ -119,10 +129,8 @@ const Contact = () => {
             />
             {errors.message && (
               <p className="text-red mt-1">
-                {errors.message.type === "required" &&
-                  "This field is required."}
-                {errors.message.type === "maxLength" &&
-                  "Max length is 2000 char."}
+                {errors.message.type === "required" && "This field is required."}
+                {errors.message.type === "maxLength" && "Max length is 2000 char."}
               </p>
             )}
 
