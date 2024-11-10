@@ -68,7 +68,7 @@ const MySkills = () => {
       <img src="/assets/MongoDb.png" alt="MongoDB" className="w-16 h-16 sm:w-20 sm:h-20" />
       <img src="/assets/images.png" alt="" className="w-16 h-16 sm:w-20 sm:h-20" />
       <img src="/assets/Amazon-Web-Services-AWS-Logo (1).png" alt="AWS" className="w-16 h-16 sm:w-20 sm:h-20" />
-      <img src="/assets/Azure.png" alt="Azure" className="w-16 h-16 sm:w-20 sm:h-20" />
+      
     </div>
   </motion.div>
   </div>
