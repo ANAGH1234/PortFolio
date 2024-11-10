@@ -15,14 +15,14 @@ const Contact = () => {
     try {
      
       const result = await emailjs.send(
-        "service_qto0b0w",
-        "template_wu1wq3d", 
+        "service_1hfnewr",
+        "template_zwmz7kj", 
         {
           from_name: data.name,
           from_email: data.email,
           message: data.message,
         },
-        "teJw3ZFsL-Cj-oTz7" 
+        "e-HAklmyeZcUCIGZ8" 
       );
       console.log("Message sent:", result.text);
       alert("Message sent successfully!");
