@@ -19,14 +19,14 @@ const Landing = ({ setSelectedPage }) => {
             <img
               alt="profile"
               className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[315px]"
-              src="/assets/WhatsApp Image 2024-11-10 at 7.39.42 PM.jpeg"
+              src="/assets/IMG_0053.png"
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="z-10 w-full max-w-[400px] md:max-w-[315px]"
-            src="/assets/WhatsApp Image 2024-11-10 at 7.39.42 PM.jpeg"
+            src="assets/IMG_7455.JPG"
           />
         )}
       </div>
@@ -45,14 +45,15 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Dheer {""}
+            Anagh {""}
             
-              
+              Sethi
             
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-          Carpets and Beyond is your trusted partner in providing top-quality products for the hospitality sector. Our offerings include an extensive range of carpets, including hand-tufted designs, EPE foams, glue, artificial grass, towels, bedsheets, and much more to meet the needs of any space. We specialize in not only supplying these products but also providing professional installation services across India at highly reasonable prices. When it comes to carpet installations, we take full responsibility to ensure that every detail is handled with precision and care. With our commitment to quality and service, Carpets and Beyond delivers solutions that bring comfort, durability, and style to every hospitality environment.          </p>
+            A caffeine-fueled software developer with a penchant for solving puzzles and building cool tech! Whether it's code or coffee, I dive in headfirst, constantly leveling up my skills and tackling every bug like it owes me money. Equipped with a solid foundation in engineering and boundless curiosity, I'm all about creating, innovating, and having fun along the way!
+          </p>
         </motion.div>
 
         {/* CALL TO ACTIONS */}
